@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="melding"></p>
+    
+    <script>
+    //Denne koden inneholder 5 feil, forsøk å forstå hva koden gjør og rett opp feilene ergo kjørbar.
+        
+        //Vi har hentet brukerinformasjon, og lagret navnet til brukeren i en variabel kalt user_name
+        const user_name = "Patrick"
+
+        //Vi har hentet fødselsåret til brukeren og lagret det i variabelene user_birthyear
+        constt user_birthyear = 1983
+
+        //Vi regner ut alder ved å ta året vi er i minus fødselsår, og lagret svaret i en ny variabel kalt age
+        const age = 2022 - user=user_birthyear
+
+        //Så lager vi en tekst for utskrift ved hjelp av konkatinering
+        const utskrift = "Hei "user_name + (" + age + "år)";
+
+        //...og skriver den ut til elementet med id melding
+        document.getElementById("melding").innerHTML = utskrift;
+
+    </script>
+
+
+</body>
+</html>
