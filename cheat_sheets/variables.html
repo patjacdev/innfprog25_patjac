@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables Cheat Sheet</title>
+</head>
+<body>
+    <p id="navn"></p>
+    <p id="alder"></p>
+    <p id="melding"></p>
+
+    <script>
+        //Dette er min første variabel (Begrep: DEKLARERE -> Lage en variabel vi ønsker å bruke)
+        const name = "Patrick :D"
+        //Her føres det i consolen (Reaveal in file explorer -> inspect)
+        console.log(name)
+        //Min første utskrift
+        document.getElementById("navn").innerHTML = name
+
+
+        //Let kan endres men ikke const
+        const birthYear = 2001
+        //(Let brukes når man skal endre verdi senere i koden)
+        let year = 2025
+        //Utrenging av min alder basert på variablene birthYear og year
+        let age = year - birthYear
+
+        console.log(age)
+
+        document.getElementById("alder").innerHTML = age
+
+        //Sette sammen flere ting 
+            document.getElementById("melding").innerHTML = "Hei, jeg heter " + name + ", og jeg er " + age + " år gammel"
+
+    </script>
+</body>
+</html>
