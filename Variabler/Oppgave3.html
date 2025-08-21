@@ -6,7 +6,24 @@
     <title>Document</title>
 </head>
 <body>
-    
-    
+
+    <h1>Gjennomsnittsalder for hele familien</h1>
+
+    <p id="average"></p>
+
+    <script>
+        //Alderen til hvert familiemedlem
+        let far = 37;
+        let mor = 32;
+        let datter = 7;
+        let sønn = 2;
+
+        // Regn ut gjennomsnittsalderen ( 37 + 32 + 7 + 2 / 4)
+        let gjennomsnitt = (far + mor + datter + sønn) / 4;
+
+        // Skriv ut gjennomsnittsalderen i <p>-taggen
+        document.getElementById("average").innerText = "gjennomsnittsalderen i familien er " + gjennomsnitt + " år.";
+
+    </script>
 </body>
 </html>
