@@ -11,17 +11,37 @@
     <script>
     //Denne koden inneholder 5 feil, forsøk å forstå hva koden gjør og rett opp feilene ergo kjørbar.
         
+
         //Vi har hentet brukerinformasjon, og lagret navnet til brukeren i en variabel kalt user_name
-        const user_name = "Patrick"
+        // Her ser vi at vi mangler ""; for "PATRICK ( FEIL NR:1 )
+        const user_name = "Patrick
+
+       
+
 
         //Vi har hentet fødselsåret til brukeren og lagret det i variabelene user_birthyear
-        constt user_birthyear = 1983
+       // Her er det skrivefeil men const det er to TT'er ( FEIL NR:2 )
+        constt user_birthyear = 1983;
+
+
+
 
         //Vi regner ut alder ved å ta året vi er i minus fødselsår, og lagret svaret i en ny variabel kalt age
+        // Her skrev vi user når vi bare skulle skrive user_birthyear ( FEIL NR:3 )
         const age = 2022 - user=user_birthyear
+        
+
+
 
         //Så lager vi en tekst for utskrift ved hjelp av konkatinering
-        const utskrift = "Hei "user_name + (" + age + "år)";
+        // Her har vi glemt + etter "Hei " og "" er rotete ( Feil NR:4 )
+        const utskrift = "Hei "user_name + " (" + age + "år)";
+     //Du kan ikke starte en streng, åpne parentes, og så plusse. Det skaper et parser-feil i JavaScript.
+        
+        /* Sånn skal linja over se ut (Linje 38=Feil men Linje 42=Riktig)
+        const utskrift = "Hei " + user_name + " (" + age + " år)"; */
+
+
 
         //...og skriver den ut til elementet med id melding
         document.getElementById("melding").innerHTML = utskrift;
