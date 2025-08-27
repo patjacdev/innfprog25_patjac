@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betinget logikk/Conditional logic - Cheat sheet</title>
+</head>
+<body>
+
+    <h2> Er du kvalifisert til å ta førerkort?</h2>
+    <p id="carmsg"></p>
+
+
+    <h3> Kan spilleren åpne døren???</h3>
+    <p id="doormsg"></p>
+
+    <h4> Kan jeg pensjonere meg?</h4>
+    <p id="retire"></p>
+
+    <script>
+        //Du kan endre alderen
+        const age = 35
+        //Kan sette til false eller true på trafikalt grunnkurs
+        const tg_passed = true 
+
+
+        //IF-test (Større enn eller like >=)
+        if(age >= 18 && tg_passed === true){
+            document.getElementById("carmsg").innerHTML = "Ja"
+        } else{
+            document.getElementById("carmsg").innerHTML = "NEI!"
+        }
+     //---------------------------------------------------------------------
+        //(Nested IF) en IF inni en IF
+     //Sjekk om dør er låst, eventuelt om spiller har nøkkel i sekken
+        const door_locked = true
+        //Her kan man gi key til døra slik at den åpner seg
+        const backpack = "key"
+        
+        let utskrift = document.getElementById("doormsg")
+
+        if(door_locked === false){
+            utskrift.innerHTML = "JA!"
+        } else {
+            if(backpack === "key"){
+                utskrift.innerHTML = "JA!"
+            } else {
+                utskrift.innerHTML = "NEI!"
+            }
+        }
+     //----------------------------------------------------------------------
+        let retiremsg = document.getElementById("retire")
+        //sjekk om mulig pensjonsalder
+        if(age >= 62 && age < 67) {
+            retiremsg.innerHTML = "Du kan gå av med AFP"
+        } else if(age >= 67){
+            retiremsg.innerHTML = "Du kan gå av med full pensjon"
+        } else {                                        //Template literals eller noe
+            retiremsg.innerHTML = `Du kan gå av med AFP om ${62 - age} år, og full pensjon om ${67 - age} år.`
+        }
+
+
+    </script>
+    
+</body>
+</html>
