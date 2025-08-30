@@ -20,24 +20,24 @@
         betingelse ? verdihvissant : verdihvisusant
         grunnen til at den ser slik ut er fordi det er en kortere,
         måte å skrive if/else (nyttig for å sette verdier, raskt og ryddig i javascript) */
-        let ITF19019_passed = ITF19019_grade == "F" ? true : false
-        let ITF10511_passed = ITF10511_grade == "F" ? true : false
+        let ITF19019_passed = ITF19019_grade != "F" 
+        let ITF10511_passed = ITF10511_grade != "F"
 
         //Teller hvor mange kurs som er bestått :)
         //starter med telleren
         //hvergang en fag består økes countpassed med 1 :D
         let countPassed = 0
-        if (ITF19019_passed){
+        if (ITF19019_passed) {
             countPassed++
         }
-        if (ITF10511_passed){
-            countpassed++
+        if (ITF10511_passed) {
+            countPassed++
         }
 
 
         //Her bruker jeg template literals ``
-        let printtext = `Du har bestått ${countPassed} av 2 kurs`
-        document.getElementById("utskrift").innerHTML = printtext
+        let printText = `Du har bestått ${countPassed} av 2 kurs`
+        document.getElementById("utskrift").innerHTML = printText
     </script>
 </body>
 </html>
