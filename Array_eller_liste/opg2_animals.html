@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="utskrift"></p>
+
+    <script>
+        const dyr = ["hund","katt","hamster","fisk","rev","ulv","bjørn","geit","hest","ku"];
+        const animals = ["dog","cat","hamster","fish","fox","wolf","bear","goat","horse","cow"];
+
+        const tekst = `${dyr[1]} er et dyr. Det heter ${animals[1]} på engelsk. ${dyr[5]} er også et dyr, som heter ${animals[5]} på engelsk`;
+
+        document.getElementById("utskrift").innerHTML = tekst;
+
+    </script>
+    
+</body>
+</html>

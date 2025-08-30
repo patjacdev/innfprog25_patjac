@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="utskrift"></p>
+    <script>
+        const dyr = ["hund","katt","hamster","fisk","rev","ulv","bjørn","geit","hest","ku"];
+
+        dyr.push("løve","hai",); //Legger til dyr
+        dyr.sort(); //Sorterer alfabetisk
+
+        const antallDyr = dyr.length; //Finn antall dyr
+
+        const tekst = "Antall dyr:" + antallDyr + ". " + dyr.join(", ");
+
+        document.getElementById("utskrift").textContent = tekst;
+
+    </script>
+
+</body>
+</html>
