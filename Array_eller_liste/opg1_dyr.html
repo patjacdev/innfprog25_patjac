@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Id gjør det mulig å hente elementet senere med javascript-->
+    <p id="utskrift"></p>
+
+    <script>
+        
+        
+        //opprettet en konstant variabel dyr som inneholder en liste/array med 10 strenger
+        const dyr = ["hund","katt","hamster","fisk","rev","ulv","bjørn","geit","hest","ku"];
+        
+        
+        //En tekstreng med template literals, der dyrene er på indeks 5 og 8 i listen og er dynamisk utifra hvilke nummer som blir endret
+        const tekst = `Her er det en liste med 10 dyr, som for eksempel ${dyr[5]} og ${dyr[8]}.`;
+        
+       
+        //Henter HTML elementet utskrift slik at teksten vises på nettsiden.
+        document.getElementById("utskrift").textContent = tekst;
+
+
+    </script>
+</body>
+</html>
