@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Er jeg myndig, klar for studier eller pensjonklar?</h2>
+    <p id="resultat"></p>
+
+    <script>
+        let alder = 24 //Min alder
+        let tekst //en variabel der jeg putter tekst utifra betingelsene
+
+        //Er jeg mindre enn 18
+        if (alder < 18) {
+            tekst = "Du er ikke myndig"
+        // Else if sjekker om alderen min er mellom 18 og 62
+        } else if (alder >= 18 && alder <= 62) {
+            tekst = "Du er myndig og klar for studier eller arbeidslivet"
+        //Else tar alt over 62 år
+        } else {
+            tekst = "Du er pensjonsklar!"
+        }
+        document.getElementById("resultat").innerHTML = tekst
+    </script>
+
+</body>
+</html>
