@@ -12,7 +12,9 @@
         const dyr = ["hund","katt","hamster","fisk","rev","ulv","bjørn","geit","hest","ku"];
         const animals = ["dog","cat","hamster","fish","fox","wolf","bear","goat","horse","cow"];
 
-        const tekst = `${dyr[1]} er et dyr. Det heter ${animals[1]} på engelsk. ${dyr[5]} er også et dyr, som heter ${animals[5]} på engelsk`;
+        const dyrindex1 = 1
+        const dyrindex2 = 5
+        const tekst = `${dyr[dyrindex1]} er et dyr. Det heter ${animals[dyrindex1]} på engelsk. ${dyr[dyrindex2]} er også et dyr, som heter ${animals[dyrindex2]} på engelsk`;
 
         document.getElementById("utskrift").innerHTML = tekst;
 

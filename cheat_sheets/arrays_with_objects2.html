@@ -14,6 +14,7 @@
             office: "D1-016",
             email: "toremake@hiof.no",
             birthyear: 1983,
+            courses: ["innføring i programmering", "kommunikasjonsdesign","UI designprosjekt", "Utvikling av interaktive nettsteder"]
         },
         {
         
@@ -21,6 +22,7 @@
             office: "D1-015",
             email: "danielb@hiof.no",
             birthyear: 1977,
+            courses: ["Designmetoder", "UI designprosjekt"]
         },
         {
         
@@ -28,6 +30,7 @@
             office: "D1-062",
             email: "ackarlse@hiof.no",
             birthyear: 1992,
+            courses: ["Webutvikling", "Utvikling av interaktive nettsteder"]
         },
         {
         
@@ -35,32 +38,34 @@
             office: "D1-061A",
             email: "oledvo@hiof.no",
             birthyear: 1993,
+            courses: ["Innføring i datasikkerhet"]
         },
     ]
 
+    console.log(lecturers)
     const profiles = document.getElementById("profiles")
 
-        //lecturers.map(lecturer => {
-            //Listepunkt
-        //   profiles.innerHTML += `
-        //    <li>
-        //       <h3>${lecturer.name}</h3>
-        //       <span>Alder: ${2025 - lecturer.birthyear}</span>
-        //        <p>Kontor: ${lecturer.office}</p> 
-        //        <a href="mailto:${lecturer.mail}">Skriv e-post til ${lecturer.name}</a>    
-        //         </li>`
-        //    console.log(lecturer)
-       // }) 
-        //Filtrer ut av listen
-        lecturers.filter(lec => lec.birthyear >= 1990).map(lecturer => {
-              profiles.innerHTML += `
-            <li>
+            lecturers.map(lecturer => {
+                profiles.innerHTML += `
+             <li>
                 <h3>${lecturer.name}</h3>
                 <span>Alder: ${2025 - lecturer.birthyear}</span>
                 <p>Kontor: ${lecturer.office}</p> 
                 <a href="mailto:${lecturer.mail}">Skriv e-post til ${lecturer.name}</a>    
-                 </li>`
-        })
+                </li>`
+                
+
+         }) 
+        //Filtrer ut av listen
+       // lecturers.filter(lec => lec.birthyear >= 1990).map(lecturer => {
+       //       profiles.innerHTML += `
+       //     <li>
+       //         <h3>${lecturer.name}</h3>
+       //         <span>Alder: ${2025 - lecturer.birthyear}</span>
+       //         <p>Kontor: ${lecturer.office}</p> 
+       //         <a href="mailto:${lecturer.mail}">Skriv e-post til ${lecturer.name}</a>    
+       //          </li>`
+        //})
 
     </script>
 </body>

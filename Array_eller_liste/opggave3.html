@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Array oppgave 3</title>
 </head>
 <body>
     <p id="utskrift"></p>
@@ -15,9 +15,10 @@
 
         const antallDyr = dyr.length; //Finn antall dyr
 
-        const tekst = "Antall dyr:" + antallDyr + ". " + dyr.join(", ");
+        const tekst = "Antall dyr:" + antallDyr + ". " + dyr.join(", "); 
+        
 
-        document.getElementById("utskrift").textContent = tekst;
+        document.getElementById("utskrift").innerHTML = tekst;
 
     </script>
 
