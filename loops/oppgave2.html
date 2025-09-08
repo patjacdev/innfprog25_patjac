@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nedtelling med while</title>
+</head>
+<body>
+
+    <ul id="nedtelling"></ul>
+
+    <script>
+        let htmlstring = "";
+
+        let teller = 10; // Starter på 10 :D
+
+
+        //while-løkke som går så lenge teller er større eller lik 0
+        while (teller >= 0) {
+            htmlstring += `<li>${teller === 0 ? "We have take-off" : teller}</li>`;
+            teller--; // telleren reduseres med 1 hver runde
+        }
+
+        //Skriver ut htmlString inn i ul med id nedtelling:
+        document.getElementById("nedtelling").innerHTML = htmlstring;
+    </script>
+
+</body>
+</html>

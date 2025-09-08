@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oppgave 2 Løkker</title>
+</head>
+<body>
+    <ul id="animals"></ul>
+
+<script>
+  // Array/liste med 10 dyr
+  const animals = ["katt", "hund", "fisk", "mus", "fugl", "elefant", "ulv", "rein", "bjørn", "rev"];
+  
+  // Tom tekststreng for å bygge opp html/ lag klar tom HTML-variabel
+  let htmlString = "";
+  
+  // For-løkke som går gjennom animals arrayen (Går så lenge teller er større eller lik 0)
+  for (let counter = 0; counter < animals.length; counter++) {
+
+    htmlString += `<li>${animals[counter]}</li>`;
+  }
+  
+  // Skriv htmlString til ul med id "animals"
+  document.getElementById("animals").innerHTML = htmlString;
+</script>
+    
+</body>
+</html>

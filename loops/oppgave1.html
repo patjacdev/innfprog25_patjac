@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave1</title>
+</head>
+<body>
+    
+    <ul id="nedtelling"></ul>
+
+    <script>
+        let htmlstring = ""
+
+//erstatte null med "We have take off"
+        for (let teller = 10; teller >= 0; teller--) {
+            htmlstring += `<li>${teller === 0 ? "We have take off" : teller }</li>`;
+        }
+        
+    /*  for (let teller = 10; teller >= 0; teller--) {
+  htmlstring += `<li>${teller === 0 ? "We have take-off" : teller}</li>`;
+}
+
+*/  
+        document.getElementById(`nedtelling`).innerHTML = htmlstring;
+
+
+    </script>
+<!-- Det som er markert med grønt er oppgave 1.1
+ Det gjør at når nedtellingen kommer til 0, og da får man teksten i stedet for tallet i listen. -->
+</body>
+</html>
