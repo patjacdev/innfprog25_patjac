@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iOS Games</title>
+</head>
+<body>
+    <h1>iOS games</h1>
+
+    <!--med id="filter" uten listeelementer i utgangspunktet-->
+    <ul id="filter"> <!-- Tom liste hvor iOS spillene skal vises-->
+    </ul>
+    <script>
+        const games = [
+      { title: "Angry Birds", platforms: ["iOS", "Android"] },
+      { title: "Nongram", platforms: ["Android"] },
+      { title: "Plants vs Zombies", platforms: ["iOS", "Android", "Windows", "MacOS"] },
+      { title: "Punball", platforms: ["Windows", "Android"] },
+      { title: "Planet Zoo", platforms: ["Windows", "MacOS"] },
+      { title: "Woordle", platforms: ["iOS", "MacOS"] }
+    ];
+
+       // Filtrer spillene som har iOS som en av plattformene
+       //Lager en ny array med kun spill som har "iOS" i platforms listen
+    const iosGames = games.filter(game => game.platforms.includes("iOS"));
+
+//// Gjør om iosGames til HTML listeelementer og legger dem inn i <ul id="filter">
+    document.getElementById("filter").innerHTML = iosGames.map((game) => `<li>${game.title}</li>`).join('')
+   
+   </script>
+<!--
+Slik fungerer koden
+
+Først definerer man en array games med objekter som inneholder
+spilltittel og hvilke plattformer spillet finnes på.
+
+Så bruker man filter()-metoden for å lage en ny array iosGames
+som bare inneholder spill der plattform-arrayen inkluderer "iOS". filter() kjører en testfunksjon på hvert element (spill) og beholder de som returnerer true.
+
+Inne i filter-testen bruker man includes("iOS") på platforms-arrayen,
+som sjekker om "iOS" finnes i plattformene for hvert spill.
+
+Til slutt bruker man map() for å lage en ny array med HTML <li>-elementer for hver tittel i iosGames.
+
+Disse listeelementene settes sammen til en streng med join('')
+og legges inn som HTML-innhold i <ul id="filter">.
+
+Nettleseren render da denne listen som en punktliste med alle iOS-spill.
+
+
+
+
+
+
+-->
+</body>
+</html>

@@ -3,9 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Years</title>
 </head>
+    <ul id="events"></ul>
 <body>
-    
+    <script>
+        
+//variabel med indexering
+        const years = [1066, 1564, 1455, 1346, 1215]
+
+ // Bruk metoden .sort() med sammenligningsfunksjon for å sortere arrayer med tall i synkende rekkefølge
+        years.sort(function(a, b){return b - a})
+
+
+//Lag en <ul>-tag med id "events" i HTML
+        let eventHTML = ""
+
+
+//Bruk .map()-funksjonen for å bygge HTML i eventHTML ved å legge til <li>ÅRSTALL</li> for hvert årstall
+        years.map((year) => eventHTML +=`<li>${year}</li>`)
+
+        document.getElementById("events").innerHTML = eventHTML
+
+    </script>
 </body>
 </html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>Important historical tect-events</h2>
+
+<!-- Lag klar en UL tag med ID events-->
+    <ul id="events"></ul>
+
+    <script>
+// Lag en variabel, events som skal inneholde en array/liste
+// Verdiene i arrayen/lista skal være objekter med to nøkkel verdi par; year og event
+        const events = [
+            {year: 1969, event: "The creation of arpanet"},
+            {year: 1971, event: "The first email sent"},
+            {year: 1981, event: "IBM launches on a pc"},
+            {year: 1990, event: "Tim berners lee launches the first website"},
+            {year: 1998, event: "Google was founded"},
+        ]
+//lag en variabel kalt eventListHTML som ved deklarering inneholder en tom tekststreng
+        let eventListHTML = ""
+//Bruk metoden.map() for å gå gjennom arrayen med objecter
+        events.map((event) => eventListHTML += `<li>${event.year}: ${event.event}</li>`)
+
+        document.getElementById("events").innerHTML = eventListHTML
+
+    </script>
+
+</body>
+</html>
